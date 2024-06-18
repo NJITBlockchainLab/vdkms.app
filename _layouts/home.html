@@ -8,9 +8,9 @@ bodyClass: "page-home"
     <div class="row justify-content-start">
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         {{ content }}
-        {% if page.show_call_box %}
+        <!-- {% if page.show_call_box %}
           {% include call.html show_button=true %}
-        {% endif %}
+        {% endif %} -->
       </div>
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
@@ -20,6 +20,29 @@ bodyClass: "page-home"
     </div>
   </div>
 </div>
+
+<div class="sponsors">
+  {% if site.data.sponsors %}
+  <div class="strip strip-grey">
+    <div class="container pt-6 pb-6 pt-md-4 pb-md-4">
+      <div class="row justify-content-center">
+  
+        {% for sponsor in site.data.sponsors %}
+        <div class="col-12 col-md-6 col-lg-4 mb-2">
+          <div class="sponsor">
+            {% if sponsor.image %}
+            <div class="sponsor-image"><img alt="{{ sponsor.title }} logo" src="{{ sponsor.image.url | relative_url }}" width="{{ sponsor.image.width }}" style="filter: grayscale(1)" /></div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+  
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
 
 <div class="strip">
   <div class="container pt-6 pb-6 pb-md-10">

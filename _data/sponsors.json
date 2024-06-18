@@ -1,0 +1,26 @@
+[
+  {
+    "title": "FHWA",
+    "description": "Federal Highway Authority",
+    "image": {
+      "url": "images/logo/fhwa-logo.png",
+      "width": 200
+    }
+  },
+  {
+    "title": "Princeton",
+    "description": "Princeton University",
+    "image": {
+      "url": "images/logo/princeton-logo.png",
+      "width": 200
+    }
+  },
+  {
+    "title": "NJIT",
+    "description": "NJIT institute of technology",
+    "image": {
+      "url": "images/logo/njit-logo.png",
+      "width": 200
+    }
+  }
+]
