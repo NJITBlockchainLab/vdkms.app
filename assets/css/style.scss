@@ -133,6 +133,7 @@ body {
   img {
     width: 100%;
     height: auto;
+    filter: grayscale(1) invert(0.3);
   }
   .sponsor-content {
     margin-bottom: 0;
@@ -162,12 +163,12 @@ body {
   @include media-breakpoint-up(lg) {
     bottom: -120px;
     left: -60px;
-    width: 800px;
+    width: 750px;
   }
   @include media-breakpoint-up(xl) {
-    bottom: -250px;
-    left: -70px;
-    width: 850px;
+    bottom: -150px;
+    left: -40px;
+    width: 800px;
   }
 }
 .intro-image-hide-mobile {
