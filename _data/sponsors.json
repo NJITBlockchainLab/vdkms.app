@@ -22,5 +22,13 @@
       "url": "images/logo/njit-logo.png",
       "width": 200
     }
+  },
+  {
+    "title": " Lab",
+    "description": "NJIT Blockchain Lab",
+    "image": {
+      "url": "images/logo/njit-lab.png",
+      "width": 200
+    }
   }
 ]

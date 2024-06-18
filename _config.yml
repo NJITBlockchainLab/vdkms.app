@@ -3,12 +3,12 @@ permalink: pretty
 title: 'VDKMS Project'
 
 logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
+  mobile: "images/logo/app-logo-mobile.png"
+  mobile_height: "20px"
+  mobile_width: "auto"
+  desktop: "images/logo/app-logo.png"
+  desktop_height: "50px"
+  desktop_width: "auto"
 
 home: 
   limit_services: 6

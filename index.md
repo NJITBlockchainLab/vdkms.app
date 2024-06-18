@@ -1,13 +1,14 @@
 ---
-title: Jekyll Serif Theme
+title: VDKMS Project & Research
 layout: home
-description: Jekyll Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
-intro_image: "images/illustrations/pointing.svg"
+description: Project website for research projects of VDKMS -- Vehicular Decentralized Key Management System for Cellular Vehicular-to-Everything Networks, A Blockchain-Based Approach.
+intro_image: "images/illustrations/city-vehicles.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
+video_url: "https://www.youtube.com/embed/aqz-KE-bpKQ?si=VfiDHPAsyjJQ9Woz"
 show_call_box: true
 ---
 
-# Serif - A Jekyll Business Theme.
+# VDKMS Project & Research.
 
-Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+Project website for research projects of VDKMS -- Vehicular Decentralized Key Management System for Cellular Vehicular-to-Everything Networks, A Blockchain-Based Approach.

@@ -5,7 +5,7 @@
 // Colors
 $primary: #1c6da6;
 $primary-dark: #115788;
-$secondary: #3e82b4;
+$secondary: #35739f;
 $black: #0c3350;
 $white: #ffffff;
 $white-offset: #f2f6fd;
@@ -120,7 +120,6 @@ body {
 
 .sponsor {
   height: 100%;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -135,10 +134,50 @@ body {
     width: 100%;
     height: auto;
   }
-  .sponsor-title {
-  }
   .sponsor-content {
     margin-bottom: 0;
     margin-top: auto;
   }
 }
+
+.logo-mobile {
+  img {
+    height: 20px;
+    width: auto;
+  }
+}
+
+.intro-image-absolute {
+  max-width: none;
+
+  padding: 0;
+  @include media-breakpoint-up(sm) {
+  }
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    bottom: -80px;
+    left: -50px;
+    width: 700px;
+  }
+  @include media-breakpoint-up(lg) {
+    bottom: -120px;
+    left: -60px;
+    width: 800px;
+  }
+  @include media-breakpoint-up(xl) {
+    bottom: -250px;
+    left: -70px;
+    width: 850px;
+  }
+}
+.intro-image-hide-mobile {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.play_video {
+  max-width: 600px;
+}
+

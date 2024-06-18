@@ -14,7 +14,9 @@ bodyClass: "page-home"
       </div>
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
+        <img alt="{{ page.title }}"
+          class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}"
+          src="{{ page.intro_image | relURL }}" />
       </div>
       {% endif %}
     </div>
@@ -25,18 +27,19 @@ bodyClass: "page-home"
   {% if site.data.sponsors %}
   <div class="strip strip-grey">
     <div class="container pt-6 pb-6 pt-md-4 pb-md-4">
-      <div class="row justify-content-center">
-  
+      <div class="row justify-content-around">
+
         {% for sponsor in site.data.sponsors %}
-        <div class="col-12 col-md-6 col-lg-4 mb-2">
+        <div class="col-12 col-md-4 col-lg-3 mt-2 mb-2 mt-md-1 mb-md-0">
           <div class="sponsor">
             {% if sponsor.image %}
-            <div class="sponsor-image"><img alt="{{ sponsor.title }} logo" src="{{ sponsor.image.url | relative_url }}" width="{{ sponsor.image.width }}" style="filter: grayscale(1)" /></div>
+            <div class="sponsor-image"><img alt="{{ sponsor.title }} logo" src="{{ sponsor.image.url | relative_url }}"
+                width="{{ sponsor.image.width }}" style="filter: grayscale(1)" /></div>
             {% endif %}
           </div>
         </div>
         {% endfor %}
-  
+
       </div>
     </div>
   </div>
@@ -63,9 +66,16 @@ bodyClass: "page-home"
     </div>
     <div class="row justify-content-center">
       <div class="col-auto">
-        <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
+        <a class="button button-primary" href="{{ " services" | relative_url }}">View All Services</a>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="play_video container text-center my-5 ratio ratio-16x9">
+        <iframe src="{{ page.video_url }}"
+          allowfullscreen></iframe>
   </div>
 </div>
 
@@ -78,7 +88,8 @@ bodyClass: "page-home"
       <div class="col-12 col-md-6 col-lg-4 mb-2">
         <div class="feature">
           {% if feature.image %}
-          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}" height="{{ feature.image.height }}" /></div>
+          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}"
+              width="{{ feature.image.width }}" height="{{ feature.image.height }}" /></div>
           {% endif %}
           <h2 class="feature-title">{{ feature.title }}</h2>
           <div class="feature-content">{{ feature.description }}</div>
