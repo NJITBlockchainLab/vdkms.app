@@ -124,15 +124,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
-  .sponsor-image {
-    flex: 0 0 auto;
-    max-width: 200px;
-    display: flex;
-    text-align: center;
-  }
   img {
-    width: 100%;
-    height: auto;
     filter: grayscale(1) invert(0.3);
   }
   .sponsor-content {

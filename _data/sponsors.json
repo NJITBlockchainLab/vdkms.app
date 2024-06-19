@@ -4,7 +4,7 @@
     "description": "Federal Highway Authority",
     "image": {
       "url": "images/logo/fhwa-logo.png",
-      "width": 200
+      "width": 210
     }
   },
   {
@@ -20,15 +20,15 @@
     "description": "NJIT institute of technology",
     "image": {
       "url": "images/logo/njit-logo.png",
-      "width": 200
+      "width": 190
     }
   },
   {
-    "title": " Lab",
+    "title": "Lab",
     "description": "NJIT Blockchain Lab",
     "image": {
       "url": "images/logo/njit-lab.png",
-      "width": 200
+      "width": 180
     }
   }
 ]
