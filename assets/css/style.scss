@@ -1,8 +1,5 @@
 ---
 ---
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
 // Colors
 $primary: #1c6da6;
 $primary-dark: #115788;
@@ -20,7 +17,7 @@ $link-hover-decoration: underline;
 
 // Fonts
 $font-family-base: "Inter", sans-serif, -apple-system;
-$font-family-heading: "Inter", sans-serif, -apple-system;
+$font-family-heading: $font-family-base;
 
 // Footer
 $footer-background-color: $primary;
