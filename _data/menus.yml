@@ -8,9 +8,19 @@ main:
   - name: "About"
     url: "/about/"
     weight: 4
+  - name: "Dropown"
+    url: "#"
+    weight: 5
+    subs:
+      - name: "Dropown1"
+        url: "#"
+        weight: 1
+      - name: "Dropdown2"
+        url: "/about/"
+        weight: 2
   - name: "Contact"
     url: "/contact/"
-    weight: 5
+    weight: 6
 
 footer:
   - name: "Home"
