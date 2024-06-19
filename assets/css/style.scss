@@ -1,6 +1,7 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 // Colors
 $primary: #1c6da6;
@@ -19,7 +20,7 @@ $link-hover-decoration: underline;
 
 // Fonts
 $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading:  "Open Sans", sans-serif, -apple-system;
+$font-family-heading: "Open Sans", sans-serif, -apple-system;
 
 // Footer
 $footer-background-color: $primary;
@@ -172,5 +173,17 @@ body {
 
 .play_video {
   max-width: 600px;
+  iframe {
+    border-radius: 12px;
+    background-color: $secondary;
+    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);
+  }
 }
 
+// .header {
+//   .container {
+//     @include media-breakpoint-up(md) {
+//       justify-content: start;
+//     }
+//   }
+// }
