@@ -3,6 +3,41 @@ layout: default
 bodyClass: "page-home"
 ---
 
+<div class="jumbo-intro" style="background-image: url('{{page.jumbotron_background}}');">
+  <div class="intro justify-content-center">
+    <div class="container">
+      <h1>{{page.jumbotron_heading}}</h1>
+      <p>{{page.jumbotron_para}}</p>
+      <a class="button button-primary" href="{{page.jumbotron_button_link | relative_url }}">{{page.jumbotron_button_text}}</a>
+    </div>
+  </div>
+</div>
+
+<div class="partners">
+  {% if site.data.partners %}
+  <div class="strip strip-grey">
+    <div class="container pt-6 pb-4 pt-md-6 pb-md-4">
+      <div class="move-partners">
+
+        {% for partner in site.data.partners %}
+        <div class="">
+          <div class="">
+            {% if partner.image %}
+            <div class=""><img alt="{{ partner.title }} logo" src="{{ partner.image.url | relative_url }}"
+                width="{{ partner.image.width }}" /></div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<div class="strip bg-transparent pb-md-10"></div>
+
 <div class="intro">
   <div class="container">
     <div class="row justify-content-start">
@@ -23,28 +58,6 @@ bodyClass: "page-home"
   </div>
 </div>
 
-<div class="partners">
-  {% if site.data.partners %}
-  <div class="strip strip-grey">
-    <div class="container pt-6 pb-4 pt-md-4 pb-md-3">
-      <div class="move-partners">
-
-        {% for partner in site.data.partners %}
-        <div class="">
-          <div class="">
-            {% if partner.image %}
-            <div class=""><img alt="{{ partner.title }} logo" src="{{ partner.image.url | relative_url }}"
-                width="{{ partner.image.width }}" /></div>
-            {% endif %}
-          </div>
-        </div>
-        {% endfor %}
-
-      </div>
-    </div>
-  </div>
-  {% endif %}
-</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script>
@@ -78,6 +91,12 @@ bodyClass: "page-home"
 </script>
 
 <div class="strip">
+  <div class="play_video container text-center my-5 ratio ratio-16x9">
+    <iframe src="{{ page.video_url }}" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="strip">
   <div class="container pt-6 pb-6 pb-md-10">
     <div class="row justify-content-start">
       {% assign limit = site.home.limit_services | default: 6 %}
@@ -96,15 +115,9 @@ bodyClass: "page-home"
     </div>
     <div class="row justify-content-center">
       <div class="col-auto">
-        <a class="button button-primary" href="{{ " services" | relative_url }}">View All Services</a>
+        <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="strip">
-  <div class="play_video container text-center my-5 ratio ratio-16x9">
-    <iframe src="{{ page.video_url }}" allowfullscreen></iframe>
   </div>
 </div>
 
