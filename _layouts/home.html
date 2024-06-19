@@ -23,18 +23,29 @@ bodyClass: "page-home"
   </div>
 </div>
 
-<div class="sponsors">
-  {% if site.data.sponsors %}
+<div class="partners">
+  {% if site.data.partners %}
   <div class="strip strip-grey">
-    <div class="container pt-6 pb-6 pt-md-4 pb-md-4">
-      <div class="row justify-content-around">
+    <div class="move-partners-container container p-6 p-6 p-md-4 p-md-4">
+      <div class="row move-partners justify-content-around">
 
-        {% for sponsor in site.data.sponsors %}
+        {% for partner in site.data.partners %}
         <div class="col-12 col-md-4 col-lg-3 mt-2 mb-2 mt-md-1 mb-md-0">
-          <div class="sponsor">
-            {% if sponsor.image %}
-            <div class="sponsor-image"><img alt="{{ sponsor.title }} logo" src="{{ sponsor.image.url | relative_url }}"
-                width="{{ sponsor.image.width }}" /></div>
+          <div class="partner">
+            {% if partner.image %}
+            <div class="partner-image"><img alt="{{ partner.title }} logo" src="{{ partner.image.url | relative_url }}"
+                width="{{ partner.image.width }}" /></div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+
+        {% for partner in site.data.partners %}
+        <div class="col-12 col-md-4 col-lg-3 mt-2 mb-2 mt-md-1 mb-md-0">
+          <div class="partner">
+            {% if partner.image %}
+            <div class="partner-image"><img alt="{{ partner.title }} logo" src="{{ partner.image.url | relative_url }}"
+                width="{{ partner.image.width }}" /></div>
             {% endif %}
           </div>
         </div>

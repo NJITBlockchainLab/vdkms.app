@@ -30,5 +30,29 @@
       "url": "images/logo/njit-lab.png",
       "width": 180
     }
+  },
+  {
+    "title": "Linux",
+    "description": "Linux Foundation",
+    "image": {
+      "url": "images/logo/linux-logo.png",
+      "width": 200
+    }
+  },
+  {
+    "title": "Hyperledger",
+    "description": "Hyperledger Foundation",
+    "image": {
+      "url": "images/logo/hyperledger-logo.png",
+      "width": 220
+    }
+  },
+  {
+    "title": "AWS",
+    "description": "AWS",
+    "image": {
+      "url": "images/logo/aws-logo.png",
+      "width": 120
+    }
   }
 ]
