@@ -24,6 +24,14 @@
     }
   },
   {
+    "title": "NEC",
+    "description": "NEC Labs",
+    "image": {
+      "url": "images/logo/nec-logo.png",
+      "width": 200
+    }
+  },
+  {
     "title": "Lab",
     "description": "NJIT Blockchain Lab",
     "image": {
