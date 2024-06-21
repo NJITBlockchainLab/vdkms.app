@@ -1,12 +1,12 @@
 baseurl: '/'
 permalink: pretty
-title: 'VDKMS Project'
+title: 'VDKMS'
 
 logo:
-  mobile: "images/logo/app-logo-mobile.png"
+  mobile: "images/logo/logo.svg"
   mobile_height: "20px"
   mobile_width: "auto"
-  desktop: "images/logo/app-logo.png"
+  desktop: "images/logo/logo.svg"
   desktop_height: "50px"
   desktop_width: "auto"
 
