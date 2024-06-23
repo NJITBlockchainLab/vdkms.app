@@ -69,7 +69,7 @@ $sub-footer-text-color: $white;
 // @import "bootstrap/modal";
 // @import "bootstrap/tooltip";
 // @import "bootstrap/popover";
-@import "bootstrap/carousel";
+// @import "bootstrap/carousel";
 // @import "bootstrap/spinners";
 // @import "bootstrap/offcanvas";
 // @import "bootstrap/placeholders";
@@ -80,6 +80,7 @@ $sub-footer-text-color: $white;
 
 // Libraries
 @import "libraries/hamburgers/hamburgers";
+@import "libraries/tiny-slider";
 
 // Components
 @import "components/type";
@@ -107,7 +108,6 @@ $sub-footer-text-color: $white;
 @import "pages/page-teams";
 @import "pages/page-service";
 
-@import "./tiny-slider.css";
 
 body {
   font-size: 16px;
