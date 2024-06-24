@@ -8,11 +8,11 @@
     }
   },
   {
-    "title": "Princeton",
-    "description": "Princeton University",
+    "title": "DOT",
+    "description": "Department of Transportation",
     "image": {
-      "url": "images/logo/princeton-logo.png",
-      "width": 200
+      "url": "images/logo/dot-logo.png",
+      "width": 100
     }
   },
   {
@@ -28,6 +28,14 @@
     "description": "NEC Labs",
     "image": {
       "url": "images/logo/nec-logo.png",
+      "width": 200
+    }
+  },
+  {
+    "title": "Princeton",
+    "description": "Princeton University",
+    "image": {
+      "url": "images/logo/princeton-logo.png",
       "width": 200
     }
   },
