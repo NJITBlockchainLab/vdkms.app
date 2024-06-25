@@ -166,12 +166,15 @@ body {
 
 .carousel-item {
   height: 650px;
-  background-image: var(--background);
+  background-image: 
+  radial-gradient(at 70% 39%, hsla(240,0%,55%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 100%, hsla(330,0%,55%,1) 0px, transparent 50%),
+  var(--background);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color:rgba(0, 0, 0, 0.5);
   background-position: right center;
-  background-color: #545454;
-  background-blend-mode: soft-light;
+  background-blend-mode: color-dodge;
   h1,
   p {
     text-shadow: 0 0 13px rgba(0, 0, 0, 0.26);
