@@ -5,7 +5,7 @@
 
     <li class="{% if item.url == page.url %}active{% endif %}{% if item.subs[0] %}{% endif %}">
       {% if item.subs[0] %}
-      <a class="dropdown-toggle" data-toggle="collapse" href="#collapseMenu" role="button"
+      <a class="dropdown-toggle" data-bs-toggle="collapse" href="#collapseMenu" role="button"
         aria-controls="collapseExample" aria-expanded="false">{{ item.name }}</a>
       <div class="collapse" id="collapseMenu"">
         <ul>
