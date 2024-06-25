@@ -7,3 +7,15 @@ menuTrigger.onclick = function () {
   menuTrigger.classList.toggle("is-active");
   body.classList.toggle("lock-scroll");
 };
+
+
+const myCarousel = document.getElementById('vdkmsCarousel')
+
+myCarousel.addEventListener('slid.bs.carousel', event => {
+  document.querySelectorAll('.carousel-item').forEach((item, index) => {
+    if (item.classList.contains('active')) {
+      document.querySelector('.my-carousel-indicator').innerHTML = index + 1;
+    }
+  })
+})
+

@@ -3,7 +3,9 @@ layout: default
 bodyClass: "page-home"
 ---
 
-<div class="jumbo-intro" style="background-image: url('{{page.jumbotron_background}}');">
+{% include carousel.html %}
+
+<!-- <div class="jumbo-intro" style="background-image: url('{{page.jumbotron_background}}');">
   <div class="intro justify-content-center">
     <div class="container">
       <h1>{{page.jumbotron_heading}}</h1>
@@ -11,23 +13,18 @@ bodyClass: "page-home"
       <a class="button button-primary" target="_blank" href="{{page.jumbotron_button_link | relative_url }}">{{page.jumbotron_button_text}}</a>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="partners">
   {% if site.data.partners %}
   <div class="strip strip-grey">
-    <div class="container pt-6 pb-4 pt-md-6 pb-md-4">
+    <div class="col-10 pt-6 pb-4 pt-md-6 pb-md-4 mx-auto">
+      <h3 class="text-uppercase text-center text-decoration-underline pb-1">Our Partners</h3>
       <div class="move-partners">
 
         {% for partner in site.data.partners %}
-        <div class="">
-          <div class="">
-            {% if partner.image %}
-            <div class=""><img alt="{{ partner.title }} logo" src="{{ partner.image.url | relative_url }}"
-                width="{{ partner.image.width }}" /></div>
-            {% endif %}
-          </div>
-        </div>
+        <div class=""><img alt="{{ partner.title }} logo" src="{{ partner.image.url | relative_url }}"
+            width="{{ partner.image.width }}" /></div>
         {% endfor %}
 
       </div>
@@ -44,7 +41,7 @@ bodyClass: "page-home"
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         {{ content }}
         {% if page.show_call_box %}
-          {% include call.html show_button=true %}
+        {% include call.html show_button=true %}
         {% endif %}
       </div>
       {% if page.intro_image %}
@@ -58,45 +55,13 @@ bodyClass: "page-home"
   </div>
 </div>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-<script>
-  var slider = tns({
-    container: '.move-partners',
-    controls: false,
-    navPosition: 'Bottom',
-    mouseDrag: true,
-    autoplay: true,
-    autoplayButtonOutput: false,
-    // fixedWidth: true,
-    // autoWidth: true,
-    // viewportMax: 550,
-    slideBy: 'page',
-    items: 1,
-    responsive: {
-      640: {
-        edgePadding: 20,
-        gutter: 20,
-        items: 2
-      },
-      900: {
-        gutter: 30,
-        items: 3
-      },
-      1400: {
-        items: 4
-      }
-    }
-  });
-</script>
-
-<div class="strip">
-  <div class="play_video container text-center my-5 ratio ratio-16x9">
+<div class="strip px-2">
+  <div class="play_video mx-auto my-5 ratio ratio-16x9">
     <iframe src="{{ page.video_url }}" allowfullscreen></iframe>
   </div>
 </div>
 
-<div class="strip">
+<!-- <div class="strip">
   <div class="container pt-6 pb-6 pb-md-10">
     <div class="row justify-content-start">
       {% assign limit = site.home.limit_services | default: 6 %}
@@ -115,11 +80,11 @@ bodyClass: "page-home"
     </div>
     <div class="row justify-content-center">
       <div class="col-auto">
-        <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
+        <a class="button button-primary" href="{{ " services" | relative_url }}">View All Services</a>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 {% if site.data.features %}
 <div class="strip strip-grey">

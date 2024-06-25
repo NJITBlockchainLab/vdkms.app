@@ -69,7 +69,7 @@ $sub-footer-text-color: $white;
 // @import "bootstrap/modal";
 // @import "bootstrap/tooltip";
 // @import "bootstrap/popover";
-// @import "bootstrap/carousel";
+@import "bootstrap/carousel";
 // @import "bootstrap/spinners";
 // @import "bootstrap/offcanvas";
 // @import "bootstrap/placeholders";
@@ -107,7 +107,6 @@ $sub-footer-text-color: $white;
 @import "pages/page-home";
 @import "pages/page-teams";
 @import "pages/page-service";
-
 
 body {
   font-size: 16px;
@@ -151,8 +150,67 @@ body {
   }
 }
 
+// .carousel ol {
+//   display: flex;
+//   li {
+//     width: 10px;
+//     &.active {
+//       color: white;
+//     }
+//   }
+// }
+
+.carousel {
+  background-color: #5a5a5b;
+}
+
 .carousel-item {
   height: 650px;
+  background-image: var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  background-color: #545454;
+  background-blend-mode: soft-light;
+  h1,
+  p {
+    text-shadow: 0 0 13px rgba(0, 0, 0, 0.26);
+  }
+}
+
+.my-carousel-controls {
+  position: absolute;
+  top: 500px;
+  left: 70%;
+  @media (max-width: 1000px) { 
+    left: calc(50vw - 62px);
+    top: 550px;
+   }
+  a {
+    padding: 0 10px;
+    text-decoration: none;
+    span {
+      border: 1px solid white;
+      border-radius: 20px;
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-size: 20px 20px;
+      transition: 0.3s;
+      &:hover {
+        background-color: white;
+        background-blend-mode: difference;
+      }
+    }
+  }
+  .my-carousel-indicators {
+    position: relative;
+    margin: 0;
+    padding: 10px;
+    span {
+      padding: 5px;
+    }
+  }
 }
 
 .tns-outer .tns-inner .move-partners {
@@ -210,7 +268,7 @@ body {
 }
 
 .play_video {
-  max-width: 600px;
+  max-width: 1400px;
   iframe {
     border-radius: 12px;
     background-color: $secondary;
