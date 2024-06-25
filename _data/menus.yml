@@ -9,18 +9,24 @@ main:
     url: "#"
     weight: 3
   - name: "About"
-    url: ""
-    weight: 3
-    subs:
-      - name: "Teams"
-        url: "/team/"
-        weight: 2
-      - name: "About"
-        url: "/about/"
-        weight: 1
-  - name: "Contact"
-    url: "/contact/"
-    weight: 6
+    url: "/about/"
+    weight: 4
+  - name: "Team"
+    url: "/team/"
+    weight: 5
+  # - name: "About"
+  #   url: ""
+  #   weight: 3
+  #   subs:
+  #     - name: "Teams"
+  #       url: "/team/"
+  #       weight: 2
+  #     - name: "About"
+  #       url: "/about/"
+  #       weight: 1
+  # - name: "Contact"
+  #   url: "/contact/"
+  #   weight: 6
 
 footer:
   - name: "Home"
