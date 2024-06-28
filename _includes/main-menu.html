@@ -18,7 +18,7 @@
         <!-- </ul> -->
       </div>
       {% else %}
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      <a target="{% if item.newtab == true %}_blank{% endif %}" href="{{ item.url | relative_url }}">{{ item.name }}</a>
       {% endif %}
     </li>
     {% endfor %}

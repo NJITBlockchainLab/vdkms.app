@@ -5,6 +5,7 @@ main:
   - name: "Docs"
     url: "/docs/"
     weight: 2
+    newtab: true
   - name: "API"
     url: "#"
     weight: 3
