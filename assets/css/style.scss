@@ -174,7 +174,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color:rgba(0, 0, 0, 0.5);
-  background-position: right center;
+  background-position: right top;
   background-blend-mode: color-dodge;
   h1,
   p {
@@ -184,8 +184,8 @@ body {
 
 .my-carousel-controls {
   position: absolute;
-  top: 500px;
-  left: 70%;
+  top: 550px;
+  left: calc(50vw - 62px);
   @media (max-width: 1000px) { 
     left: calc(50vw - 62px);
     top: 550px;
