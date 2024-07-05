@@ -1,0 +1,13 @@
+[build]
+  command = "jekyll build"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+  RUBY_VERSION = "3.2.2"
+
+[[redirects]]
+  from = "/docs/*"
+  to = "https://vdkms-docs.netlify.app/:splat"
+  status = 200
+  force = true

@@ -1,0 +1,13 @@
+<div class='header px-2 px-md-4'>
+  <!-- <div class="container"> -->
+    <div class="logo me-auto">
+      <a class="text-decoration-none d-flex align-items-center" href="{{ site.baseurl }}"><img width="{{ site.logo.desktop_width }}" height="{{ site.logo.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" /><span data-heading="{{ site.title }}" class="fw-bolder fs-3 mx-1">{{ site.title }}</span></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="{{ site.baseurl }}"><img width="{{ site.logo.mobile_width }}" height="{{ site.logo.mobile_height }}" alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" /></a>
+    </div>
+    {% include main-menu.html %}
+    {% include hamburger.html %}
+  <!-- </div> -->
+  <a class="d-none d-md-block button" href="/contact/">Contact</a>
+</div>

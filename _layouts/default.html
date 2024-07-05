@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="{{ '/images/logo/logo.svg' | relative_url }}">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="{{ '/assets/fonts/playfair-display.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin> -->
+  <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />{% endif %}
+  {% if page.meta_title %}
+  <meta property="og:title" content="{{ page.meta_title }}" />{% else %}
+  <meta property="og:title" content="{{ page.title }}" />{% endif %}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ url }}" />
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image | absolute_url }}" />{% endif %}
+  {% if page.description %}
+  <meta property="og:description" content="{{ page.description }}" />{% endif %}
+  <meta name="twitter:card" content="summary" />
+  {% if site.data.seo.meta_twitter_site %}
+  <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />{% endif %}
+  {% if site.data.seo.meta_twitter_creator %}
+  <meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}" />{% endif %}
+
+</head>
+
+<body class='page {{layout.bodyClass}}'>
+  {% include main-menu-mobile.html %}
+  <div id="wrapper" class="wrapper">
+    {% include header.html headerClass='header-extra' %}
+    {{content}}
+  </div>
+  {% include footer.html %}
+  {% include sub-footer.html %}
+  <!-- bootstrap -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <!-- Tiny Slider scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script>
+    var slider = tns({
+      container: '.move-partners',
+      controls: false,
+      navPosition: 'Bottom',
+      mouseDrag: true,
+      autoplay: true,
+      autoplayButtonOutput: false,
+      // fixedWidth: true,
+      // autoWidth: true,
+      // viewportMax: 550,
+      slideBy: 'page',
+      items: 1,
+      responsive: {
+        640: {
+          edgePadding: 20,
+          gutter: 20,
+          items: 2
+        },
+        900: {
+          gutter: 30,
+          items: 3
+        },
+        1400: {
+          items: 5
+        }
+      }
+    });
+  </script>
+  <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+  {% include google-analytics.html %}
+
+</body>
+
+</html>

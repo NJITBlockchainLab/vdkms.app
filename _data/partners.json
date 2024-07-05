@@ -1,0 +1,74 @@
+[
+  {
+    "title": "FHWA",
+    "description": "Federal Highway Authority",
+    "image": {
+      "url": "images/logo/fhwa-logo.png",
+      "width": 210
+    }
+  },
+  {
+    "title": "DOT",
+    "description": "Department of Transportation",
+    "image": {
+      "url": "images/logo/dot-logo.png",
+      "width": 100
+    }
+  },
+  {
+    "title": "NJIT",
+    "description": "NJIT institute of technology",
+    "image": {
+      "url": "images/logo/njit-logo.png",
+      "width": 190
+    }
+  },
+  {
+    "title": "NEC",
+    "description": "NEC Labs",
+    "image": {
+      "url": "images/logo/nec-logo.png",
+      "width": 200
+    }
+  },
+  {
+    "title": "Princeton",
+    "description": "Princeton University",
+    "image": {
+      "url": "images/logo/princeton-logo.png",
+      "width": 200
+    }
+  },
+  {
+    "title": "Lab",
+    "description": "NJIT Blockchain Lab",
+    "image": {
+      "url": "images/logo/njit-lab.png",
+      "width": 180
+    }
+  },
+  {
+    "title": "Linux",
+    "description": "Linux Foundation",
+    "image": {
+      "url": "images/logo/linux-logo.png",
+      "width": 200
+    }
+  },
+  {
+    "title": "Hyperledger",
+    "description": "Hyperledger Foundation",
+    "image": {
+      "url": "images/logo/hyperledger-logo.png",
+      "width": 220
+    }
+  },
+  {
+    "title": "AWS",
+    "description": "AWS",
+    "image": {
+      "url": "images/logo/aws-logo.png",
+      "width": 120
+    }
+  }
+]
