@@ -3,10 +3,10 @@ permalink: pretty
 title: 'VDKMS'
 
 logo:
-  mobile: "images/logo/logo.svg"
+  mobile: "images/logo/vdkms-logo.png"
   mobile_height: "20px"
   mobile_width: "auto"
-  desktop: "images/logo/logo.svg"
+  desktop: "images/logo/vdkms-logo.png"
   desktop_height: "50px"
   desktop_width: "auto"
 
