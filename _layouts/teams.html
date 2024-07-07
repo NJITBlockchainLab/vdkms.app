@@ -3,7 +3,7 @@ layout: default
 bodyClass: "page-teams"
 ---
 
-<div class="intro">
+<div class="intro" style="padding-bottom: 0;">
     <div class="container">
         <div class="row justify-content-start">
             <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
@@ -11,22 +11,45 @@ bodyClass: "page-teams"
             </div>
             {% if page.intro_image %}
             <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+                <img alt={{ page.title }}
+                    class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}"
+                    src="{{ page.intro_image | relative_url }}" />
             </div>
             {% endif %}
         </div>
     </div>
 </div>
-
 <div class="container pt-6 pb-6">
     <div class="row">
         {% assign promoted_teams = site.team | where: "promoted", true | sort: "weight" %}
-        {% for team in promoted_teams %}
+        {% assign job_titles = promoted_teams | map: "jobtitle" | uniq %}
+
+        {% for jobtitle in job_titles %}
+        {% if jobtitle == "Principal Investigator" or jobtitle == "Co-Principal Investigator" %}
+        {% assign combined_titles = "Principal Investigator" %}
+        {% if forloop.first %}
+        <div class="col-12">
+            <h2 class="job-title-heading">{{ combined_titles }}</h2>
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="col-12">
+            <h2 class="job-title-heading">{{ jobtitle }}</h2>
+        </div>
+        {% endif %}
+
+        {% assign teams_by_jobtitle = promoted_teams | where: "jobtitle", jobtitle %}
+        {% for team in teams_by_jobtitle %}
         <div class="col-12 col-md-6 mb-2">
             <div class="team team-summary team-summary-large">
-                {% if team.image %}
+                {% if team.image and team.image != "" %}
                 <div class="team-image">
-                    <img width="90" height="90" alt="{{ team.title }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" />
+                    <img width="90" height="90" alt="{{ team.title }}" class="img-fluid mb-2"
+                        src="{{ team.image | relative_url }}" />
+                </div>
+                {% else %}
+                <div class="pseudo-profile" id="pseudoProfile-{{ forloop.index }}">{{ team.title | slice: 0, 1 | upcase
+                    }}
                 </div>
                 {% endif %}
                 <div class="team-meta">
@@ -40,15 +63,21 @@ bodyClass: "page-teams"
             </div>
         </div>
         {% endfor %}
+        {% endfor %}
     </div>
-    <div class="row pt-6 pb-6">
+</div>
+
+
+
+<!-- <div class="row pt-6 pb-6">
         {% assign teams = site.team | where: "promoted", empty | sort: "weight" %}
         {% for team in teams %}
         <div class="col-12 col-md-4 mb-3">
             <div class="team team-summary">
                 {% if team.image %}
                 <div class="team-image">
-                    <img width="60" height="60" alt="{{ team.title }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" />
+                    <img width="60" height="60" alt="{{ team.title }}" class="img-fluid mb-2"
+                        src="{{ team.image | relative_url }}" />
                 </div>
                 {% endif %}
                 <div class="team-meta">
@@ -58,5 +87,4 @@ bodyClass: "page-teams"
             </div>
         </div>
         {% endfor %}
-    </div>
-</div>
+    </div> -->
