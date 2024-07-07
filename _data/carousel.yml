@@ -1,14 +1,14 @@
 slides:
-  - image: "/images/gallery/dash-tab.webp"
+  - image: "/images/gallery/dash-tab-3.webp"
     title: "Vehicular Decentralized Key Management System."
     text: "A blockchain solution for security and privacy in vehicle to vehicle commnunication."
     button:
         text: "Learn More"
         link: "https://vdkms.app"
-  - image: "https://www.popsci.com/wp-content/uploads/2023/03/30/how-to-customize-android-auto.jpg?auto=webp&width=1440&height=810"
+  - image: "/images/gallery/dash-tab-2.webp"
     title: "blu blu blu"
     text: "A blockchain solution for security and privacy in vehicle to vehicle commnunication."
-  - image: "https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg"
+  - image: "/images/gallery/dash-tab.webp"
     title: "ble ble ble"
     text: "A blockchain solution for security and privacy in vehicle to vehicle commnunication."
   - image: "https://s1.cdn.autoevolution.com/images/news/new-android-auto-update-now-available-with-mysterious-changes-206617_1.jpeg"
