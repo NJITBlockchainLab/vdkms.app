@@ -24,6 +24,10 @@
   width: 100%;
   overflow: hidden;
   @include clearfix();
+  // height: calc(100vh - 71px);
+  // @media (max-width: 1000px) { 
+  //   height: calc(100vh - 81px);
+  //  }
 }
 
 .carousel-item {
@@ -112,10 +116,12 @@
     opacity: $carousel-control-hover-opacity;
   }
 }
+
 .carousel-control-prev {
   left: 0;
   background-image: if($enable-gradients, linear-gradient(90deg, rgba($black, .25), rgba($black, .001)), null);
 }
+
 .carousel-control-next {
   right: 0;
   background-image: if($enable-gradients, linear-gradient(270deg, rgba($black, .25), rgba($black, .001)), null);
@@ -143,6 +149,7 @@
 .carousel-control-prev-icon {
   background-image: escape-svg($carousel-control-prev-icon-bg);
 }
+
 .carousel-control-next-icon {
   background-image: escape-svg($carousel-control-next-icon-bg);
 }
@@ -210,6 +217,7 @@
 // Dark mode carousel
 
 @mixin carousel-dark() {
+
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     filter: $carousel-dark-control-icon-filter;
@@ -230,11 +238,14 @@
 
 @if $enable-dark-mode {
   @include color-mode(dark) {
-    @if $color-mode-type == "media-query" {
+    @if $color-mode-type =="media-query" {
       .carousel {
         @include carousel-dark();
       }
-    } @else {
+    }
+
+    @else {
+
       .carousel,
       &.carousel {
         @include carousel-dark();

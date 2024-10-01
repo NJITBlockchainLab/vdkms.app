@@ -185,10 +185,11 @@ body {
 .my-carousel-controls {
   position: absolute;
   top: 550px;
+  // bottom: 5px;
   left: calc(50vw - 62px);
   @media (max-width: 1000px) { 
     left: calc(50vw - 62px);
-    top: 550px;
+    // bottom: 50px;
    }
   a {
     padding: 0 10px;

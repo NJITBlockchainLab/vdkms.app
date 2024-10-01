@@ -1,16 +1,19 @@
 slides:
   - image: "/images/gallery/dash-tab-3.webp"
-    title: "Vehicular Decentralized Key Management System."
-    text: "A blockchain solution for security and privacy in vehicle to vehicle commnunication."
+    title: "Vehicle End"
+    text: "Manage vehicle credentials on-the-go with our secure, user-friendly mobile app."
     button:
         text: "Learn More"
         link: "https://vdkms.app"
+  
   - image: "/images/gallery/dash-tab-2.webp"
-    title: "blu blu blu"
-    text: "A blockchain solution for security and privacy in vehicle to vehicle commnunication."
+    title: "Certificate Authority"
+    text: "Issue and verify vehicle credentials with confidence using our Certificate Authority module."
+  
   - image: "/images/gallery/dash-tab.webp"
-    title: "ble ble ble"
-    text: "A blockchain solution for security and privacy in vehicle to vehicle commnunication."
+    title: "Infrastructure"
+    text: "Enable real-time communication and safety alerts with robust infrastructure support."
+  
   - image: "https://s1.cdn.autoevolution.com/images/news/new-android-auto-update-now-available-with-mysterious-changes-206617_1.jpeg"
-    title: "bli bli bli"
-    text: "A blockchain solution for security and privacy in vehicle to vehicle commnunication."
+    title: "Blockchain Ledger"
+    text: "Experience secure, transparent, and decentralized identity management with our blockchain ledger."
