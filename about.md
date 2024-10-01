@@ -5,83 +5,80 @@ description: About
 bodyClass: page-about
 ---
 
-Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
+# About the Decentralized Vehicle Credential Management System (VDKMS)
 
-![Accounting Services](/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg)
+The Decentralized Vehicle Credential Management System (VDKMS) is an innovative solution designed to revolutionize how vehicle credentials are managed, verified, and stored. Built on consortium blockchain technology, this project aims to provide a secure, transparent, and privacy-centric approach to vehicle identity management. By leveraging blockchain and decentralized identifiers (DIDs), VDKMS empowers both individuals and organizations to interact with vehicle-related data safely and efficiently.
 
-# Objectives
+## Project Overview
 
-Financial accounting and financial reporting are often used as synonyms.
+The VDKMS project utilizes Hyperledger Indy, a blockchain framework specifically tailored for decentralized identity solutions. It integrates various components, including a mobile application, blockchain nodes, a Certificate Authority (CA), mediators, and an infrastructure for communication and data sharing. These elements work together to create a comprehensive ecosystem for decentralized vehicle credential management.
 
-1. According to International Financial Reporting Standards: the objective of financial reporting is:
-2. To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.
-3. According to the European Accounting Association:
+## Key Components
 
-## Relevance
+### 1. Blockchain Ledger
 
-Relevance is the capacity of the financial information to influence the decision of its users. The ingredients of relevance are the predictive value and confirmatory value. Materiality is a sub-quality of relevance.
+The blockchain ledger serves as the backbone of the VDKMS. Using Hyperledger Indy, it manages decentralized identifiers (DIDs) and verifiable credentials, which are critical for secure identity management. Blockchain nodes participate in the consensus process, validating transactions and ensuring the network's integrity. These nodes store public identity records, such as public keys and service endpoints, while keeping sensitive information off-ledger to protect user privacy. This infrastructure allows for self-sovereign identity management across various industries, providing users with greater control over their data.
 
-> The ingredients of relevance are the predictive value and confirmatory value.
+![Ledger](/images/about/ledger.png)
 
-Information is considered material if its omission or misstatement could influence the economic decisions of users taken on the basis of the financial statements.
+### 2. FHWA Vehicle End (Mobile Application)
 
-## Faithful Representation
+The mobile application, known as FHWA Vehicle End, acts as the user interface for interacting with the decentralized identity ecosystem. It includes functionalities such as:
 
-Faithful representation means that the actual effects of the transactions shall be properly accounted for and reported in the financial statements. The words and numbers must match what really happened in the transaction. The ingredients of faithful representation are completeness, neutrality and free from error.
+- **Login:** Secure user authentication using a PIN to access the app's features.
+- **QR Code:** Generating and scanning QR codes for secure information exchange and device connections.
+- **Bluetooth Integration:** Facilitates secure connections with other devices, enabling proof requests and data sharing.
+- **Credentials Management:** Allows users to receive, view, and manage their vehicle credentials securely. Users can respond to proof requests and share information as needed.
 
-## Enhancing Qualitative Characteristics
+Through these features, the app provides an intuitive and user-friendly experience while maintaining high levels of security and privacy.
 
-### Verifiability
+![Vehicle End](/images/about/home.jpg)
 
-Verifiability implies consensus between the different knowledgeable and independent users of financial information. Such information must be supported by sufficient evidence to follow the principle of objectivity.
+### 3. Certificate Authority (CA)
 
-### Comparability
+The CA module is responsible for creating, issuing, and managing vehicle credentials. Acting as a trusted authority, it enables the following:
 
-Comparability is the uniform application of accounting methods across entities in the same industry. The principle of consistency is under comparability. Consistency is the uniform application of accounting across points in time within an entity.
+- **Creating Invitations:** Securely generates invitations for users to connect with the system and request credentials.
+- **Issuing Credentials:** Issues verifiable credentials based on pre-defined schemas. Users can receive these credentials by scanning QR codes.
+- **Terms of Service:** Incorporates terms and conditions to ensure secure and compliant credential issuance.
 
-### Understandability
+By utilizing the CA, the project ensures that vehicle credentials are only issued by verified authorities, maintaining trust and authenticity within the ecosystem.
 
-Understandability means that accounting reports should be expressed as clearly as possible and should be understood by those to whom the information is relevant.
-Timeliness: Timeliness implies that financial information must be presented to the users before a decision is to be made.
+![CA](/images/about/dashboard.png)
 
----
+### 4. Mediator
 
-## Statement of cash flows
+Mediators are crucial intermediaries in the VDKMS architecture, facilitating secure and flexible communication between agents. Particularly vital for mobile wallet users, mediators enable indirect message delivery, overcoming mobile operating system limitations. Here's how they enhance the system:
 
-The statement of cash flows considers the inputs and outputs in concrete cash within a stated period. The general template of a cash flow statement is as follows: Cash Inflow - Cash Outflow + Opening Balance = Closing Balance
+- **Routing and Encryption:** Mediators act as routing agents, receiving encrypted messages from senders and forwarding them to recipients. They use layered encryption, ensuring that even intermediaries cannot access the message content.
+- **Mobile Support:** Allows mobile devices to participate in decentralized identity communications, even when they cannot receive direct messages.
+- **Privacy:** Obscures communication endpoints and supports complex routing scenarios, providing an additional layer of privacy and security.
 
-| Cash Inflow | Outflow   | Opening Balance |
-| ----------- | --------- | --------------- |
-| _Monday_    | `Tuesday` | **Wednesday**   |
-| 1           | 2         | 3               |
+The mediator model in VDKMS creates a robust communication framework that upholds end-to-end encryption and ensures secure message transmission.
 
-**Example 1:** in the beginning of September, Ellen started out with $5 in her bank account. During that same month, Ellen borrowed $20 from Tom. At the end of the month, Ellen bought a pair of shoes for $7. Ellen's cash flow statement for the month of September looks like this:
+### 5. Infrastructure
 
-- Cash inflow: $20
-- Cash outflow:$7
-- Opening balance: $5
-- Closing balance: $20 – $7 + $5 = $18
+The infrastructure component of VDKMS manages the creation of multi-use invitations and multicast messaging. It plays a key role in connecting vehicles and broadcasting messages based on real-time events. Key features include:
 
-**Example 2:** in the beginning of June, WikiTables, a company that buys and resells tables, sold 2 tables. They'd originally bought the tables for $25 each, and sold them at a price of $50 per table. The first table was paid out in cash however the second one was bought in credit terms. WikiTables' cash flow statement for the month of June looks like this:
+- **Multi-Use Invitations:** The infrastructure creates invitations that allow vehicles to connect to the system, establishing a dedicated, secure connection.
+- **Multicast Messaging:** Broadcasts messages to all connected devices, enhancing urban mobility and safety by providing real-time communication. For example, it can alert vehicles about ongoing construction activities or approaching intersections.
 
-> **Important:** the cash flow statement only considers the exchange of actual cash, and ignores what the person in question owes or is owed.
+This component significantly improves the efficiency and safety of vehicle interactions within the network by facilitating seamless, secure communication.
 
-## Statement of financial position (balance sheet)
+![Infrastructure](/images/about/car_incar.png)
 
-The balance sheet is the financial statement showing a firm's assets, liabilities and equity (capital) at a set point in time, usually the end of the fiscal year reported on the accompanying income statement.
+## How It Works
 
-- **fixed assets**
-  - property
-  - building
-  - equipment (such as factory machinery)
-- **intangible assets**
-  - copyrights
-  - trademarks
-  - patents
-    - pending
-    - international
-- goodwill
+1. **Blockchain Nodes and DIDs:** The system utilizes blockchain nodes to manage decentralized identifiers (DIDs) and verifiable credentials. These nodes validate transactions and store public elements of identity records, while private information is kept off-ledger, preserving user privacy.
 
-Owner's equity, sometimes referred to as net assets, is represented differently depending on the type of business ownership. Business ownership can be in the form of a sole proprietorship, partnership, or a corporation. For a corporation, the owner's equity portion usually shows common stock, and retained earnings (earnings kept in the company). Retained earnings come from the retained earnings statement, prepared prior to the balance sheet.
+2. **Mobile Application:** Users log into the FHWA Vehicle End mobile app, which provides various features such as credential management, QR code scanning, Bluetooth connectivity, and proof requests. The app allows users to interact with the network securely and seamlessly.
+
+3. **Certificate Authority (CA):** The CA issues credentials to users after they receive invitations. These credentials are securely managed and can be shared with other entities within the network as needed.
+
+4. **Mediator Communication:** Mediators act as intermediaries for secure communication between users, utilizing protocols such as WSS (WebSocket Secure) and HTTPS to maintain encrypted data transmission. This model supports privacy-focused interactions and facilitates real-time updates between mobile devices and the network.
+
+5. **Infrastructure Broadcasts:** The infrastructure broadcasts messages to connected devices based on real-time events, enhancing safety and efficiency. These messages are distributed using dedicated multi-use invitations and multicast messaging.
+
+## Conclusion
+
+The Decentralized Vehicle Credential Management System (VDKMS) represents a significant advancement in how vehicle credentials and identities are managed. By utilizing blockchain technology, decentralized identifiers (DIDs), and secure communication protocols, the system offers a more privacy-centric, transparent, and user-friendly approach to vehicle identity management. As adoption of decentralized identity solutions continues to grow, VDKMS provides a solid foundation for secure, trusted interactions in the automotive industry.
