@@ -3,10 +3,11 @@ main:
     url: "/"
     weight: 1
   - name: "Showcase"
-    url: "#"
+    url: "http://3.84.197.15:3000/digital-trust/showcase"
     weight: 2
+    newtab: true
   - name: "Docs"
-    url: "/docs/"
+    url: "http://3.84.197.15:4001/docs/"
     weight: 3
     newtab: true
   - name: "API"
